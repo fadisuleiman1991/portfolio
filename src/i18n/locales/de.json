@@ -1,0 +1,75 @@
+{
+  "nav": {
+    "home": "Start",
+    "about": "Über mich",
+    "skills": "Skills",
+    "experience": "Berufserfahrung",
+    "projects": "Projekte",
+    "education": "Bildung",
+    "activities": "Aktivitäten",
+    "contact": "Kontakt",
+    "impressum": "Impressum"
+  },
+  "hero": {
+    "greeting": "Hallo, ich bin",
+    "ctaContact": "Kontakt aufnehmen",
+    "ctaDownload": "Lebenslauf herunterladen",
+    "scrollHint": "Scrollen"
+  },
+  "sections": {
+    "aboutTitle": "Über mich",
+    "aboutEyebrow": "Profil",
+    "skillsTitle": "Technische Fähigkeiten",
+    "skillsEyebrow": "Stack",
+    "experienceTitle": "Berufserfahrung",
+    "experienceEyebrow": "Werdegang",
+    "projectsTitle": "Projekte",
+    "projectsEyebrow": "Auswahl",
+    "educationTitle": "Bildung & Weiterbildung",
+    "educationEyebrow": "Qualifikationen",
+    "activitiesTitle": "Aktivitäten",
+    "activitiesEyebrow": "Engagement",
+    "contactTitle": "Kontakt",
+    "contactEyebrow": "Schreib mir"
+  },
+  "labels": {
+    "education": "Ausbildung",
+    "trainings": "Weiterbildungen",
+    "languages": "Sprachen",
+    "birthDate": "Geburtsdatum",
+    "birthPlace": "Geburtsort",
+    "nationality": "Staatsangehörigkeit",
+    "location": "Wohnort",
+    "maritalStatus": "Familienstand",
+    "role": "Rolle",
+    "technologies": "Technologien",
+    "liveDemo": "Live-Demo",
+    "sourceCode": "Quellcode",
+    "present": "heute",
+    "secondaryJob": "Nebentätigkeit",
+    "responsibilities": "Aufgaben",
+    "viewProfile": "Profil ansehen",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "city": "Stadt",
+    "country": "Land"
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten.",
+    "builtWith": "Erstellt mit React, TypeScript und Tailwind."
+  },
+  "impressum": {
+    "title": "Impressum",
+    "placeholder": "Diese Seite enthält das gesetzlich vorgeschriebene Impressum gemäß § 5 TMG. Inhalte werden in Kürze ergänzt.",
+    "backHome": "Zurück zur Startseite"
+  },
+  "language": {
+    "german": "Deutsch",
+    "english": "English",
+    "arabic": "العربية"
+  },
+  "theme": {
+    "toggleDark": "Dunkles Design aktivieren",
+    "toggleLight": "Helles Design aktivieren"
+  }
+}

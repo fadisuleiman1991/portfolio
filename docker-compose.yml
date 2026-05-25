@@ -1,0 +1,11 @@
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: fadi-portfolio:dev
+    container_name: fadi-portfolio
+    restart: unless-stopped
+
+    ports:
+      - "4200:80"

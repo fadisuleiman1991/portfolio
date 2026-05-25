@@ -1,0 +1,75 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "about": "نبذة عني",
+    "skills": "المهارات",
+    "experience": "الخبرة",
+    "projects": "المشاريع",
+    "education": "التعليم",
+    "activities": "الأنشطة",
+    "contact": "التواصل",
+    "impressum": "البيانات القانونية"
+  },
+  "hero": {
+    "greeting": "مرحبًا، أنا",
+    "ctaContact": "تواصل معي",
+    "ctaDownload": "تحميل السيرة الذاتية",
+    "scrollHint": "مرّر للأسفل"
+  },
+  "sections": {
+    "aboutTitle": "نبذة عني",
+    "aboutEyebrow": "ملف شخصي",
+    "skillsTitle": "المهارات التقنية",
+    "skillsEyebrow": "التقنيات",
+    "experienceTitle": "الخبرة المهنية",
+    "experienceEyebrow": "المسار",
+    "projectsTitle": "المشاريع",
+    "projectsEyebrow": "أعمال مختارة",
+    "educationTitle": "التعليم والتدريب",
+    "educationEyebrow": "المؤهلات",
+    "activitiesTitle": "الأنشطة",
+    "activitiesEyebrow": "إسهامات",
+    "contactTitle": "التواصل",
+    "contactEyebrow": "تحدّث معي"
+  },
+  "labels": {
+    "education": "التعليم",
+    "trainings": "التدريبات",
+    "languages": "اللغات",
+    "birthDate": "تاريخ الميلاد",
+    "birthPlace": "مكان الميلاد",
+    "nationality": "الجنسية",
+    "location": "مكان الإقامة",
+    "maritalStatus": "الحالة الاجتماعية",
+    "role": "الدور",
+    "technologies": "التقنيات",
+    "liveDemo": "العرض المباشر",
+    "sourceCode": "الشيفرة المصدرية",
+    "present": "حتى الآن",
+    "secondaryJob": "عمل جانبي",
+    "responsibilities": "المهام",
+    "viewProfile": "عرض الملف",
+    "email": "البريد الإلكتروني",
+    "phone": "الهاتف",
+    "city": "المدينة",
+    "country": "الدولة"
+  },
+  "footer": {
+    "rights": "جميع الحقوق محفوظة.",
+    "builtWith": "بُني باستخدام React وTypeScript وTailwind."
+  },
+  "impressum": {
+    "title": "البيانات القانونية",
+    "placeholder": "تحتوي هذه الصفحة على البيانات القانونية المطلوبة وفقًا للمادة 5 من قانون TMG. ستُضاف التفاصيل قريبًا.",
+    "backHome": "العودة إلى الرئيسية"
+  },
+  "language": {
+    "german": "Deutsch",
+    "english": "English",
+    "arabic": "العربية"
+  },
+  "theme": {
+    "toggleDark": "تفعيل الوضع الداكن",
+    "toggleLight": "تفعيل الوضع الفاتح"
+  }
+}

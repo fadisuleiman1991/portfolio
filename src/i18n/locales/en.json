@@ -1,0 +1,75 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "education": "Education",
+    "activities": "Activities",
+    "contact": "Contact",
+    "impressum": "Legal Notice"
+  },
+  "hero": {
+    "greeting": "Hello, I am",
+    "ctaContact": "Get in touch",
+    "ctaDownload": "Download CV",
+    "scrollHint": "Scroll"
+  },
+  "sections": {
+    "aboutTitle": "About",
+    "aboutEyebrow": "Profile",
+    "skillsTitle": "Technical Skills",
+    "skillsEyebrow": "Stack",
+    "experienceTitle": "Experience",
+    "experienceEyebrow": "Career",
+    "projectsTitle": "Projects",
+    "projectsEyebrow": "Selected work",
+    "educationTitle": "Education & Training",
+    "educationEyebrow": "Qualifications",
+    "activitiesTitle": "Activities",
+    "activitiesEyebrow": "Engagement",
+    "contactTitle": "Contact",
+    "contactEyebrow": "Let's talk"
+  },
+  "labels": {
+    "education": "Education",
+    "trainings": "Trainings",
+    "languages": "Languages",
+    "birthDate": "Date of birth",
+    "birthPlace": "Place of birth",
+    "nationality": "Nationality",
+    "location": "Location",
+    "maritalStatus": "Marital status",
+    "role": "Role",
+    "technologies": "Technologies",
+    "liveDemo": "Live demo",
+    "sourceCode": "Source code",
+    "present": "present",
+    "secondaryJob": "Side job",
+    "responsibilities": "Responsibilities",
+    "viewProfile": "View profile",
+    "email": "Email",
+    "phone": "Phone",
+    "city": "City",
+    "country": "Country"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "builtWith": "Built with React, TypeScript and Tailwind."
+  },
+  "impressum": {
+    "title": "Legal Notice",
+    "placeholder": "This page contains the legally required Impressum according to § 5 TMG. Content will be added soon.",
+    "backHome": "Back to home"
+  },
+  "language": {
+    "german": "Deutsch",
+    "english": "English",
+    "arabic": "العربية"
+  },
+  "theme": {
+    "toggleDark": "Enable dark mode",
+    "toggleLight": "Enable light mode"
+  }
+}
