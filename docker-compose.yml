@@ -3,8 +3,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: fadi-portfolio:dev
-    container_name: fadi-portfolio
+    image: portfolio:dev
+    container_name: portfolio
     restart: unless-stopped
 
     ports:
