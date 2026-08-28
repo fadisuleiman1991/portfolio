@@ -51,8 +51,8 @@ export default function Contact() {
           title={t("sections.contactTitle")}
         />
 
-        <div className="grid lg:grid-cols-12 gap-10">
-          <div className="lg:col-span-7 flex flex-col gap-6">
+        <div className="grid gap-10 lg:grid-cols-12">
+          <div className="flex flex-col gap-6 lg:col-span-7">
             {contactItems.map((c, i) => (
               <motion.div
                 key={c.label}
@@ -60,13 +60,13 @@ export default function Contact() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="flex items-center gap-5 p-5 border border-fg/10 hover:border-accent/40 transition-colors"
+                className="border-fg/10 hover:border-accent/40 flex items-center gap-5 border p-5 transition-colors"
               >
-                <span className="flex items-center justify-center w-10 h-10 bg-accent/10 text-accent rounded-sm">
+                <span className="bg-accent/10 text-accent flex h-10 w-10 items-center justify-center rounded-sm">
                   {c.icon}
                 </span>
                 <div className="flex flex-col">
-                  <span className="font-mono text-[11px] uppercase tracking-wider text-fg/50">
+                  <span className="text-fg/50 font-mono text-[11px] tracking-wider uppercase">
                     {c.label}
                   </span>
                   {c.href ? (
@@ -85,7 +85,7 @@ export default function Contact() {
           </div>
 
           <div className="lg:col-span-5">
-            <h3 className="font-mono text-xs uppercase tracking-[0.3em] text-accent mb-6">
+            <h3 className="text-accent mb-6 font-mono text-xs tracking-[0.3em] uppercase">
               Online
             </h3>
             <ul className="flex flex-col gap-3">
@@ -101,7 +101,7 @@ export default function Contact() {
                     href={p.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-center justify-between gap-4 p-4 border border-fg/10 hover:border-accent/40 transition-colors"
+                    className="group border-fg/10 hover:border-accent/40 flex items-center justify-between gap-4 border p-4 transition-colors"
                   >
                     <span className="flex items-center gap-3">
                       <span className="text-fg/70 group-hover:text-accent">

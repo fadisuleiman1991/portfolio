@@ -17,7 +17,7 @@ interface Props {
 
 export default function Timeline({ items }: Props) {
   return (
-    <ol className="relative ms-4 border-s border-fg/10">
+    <ol className="border-fg/10 relative ms-4 border-s">
       {items.map((item, i) => (
         <motion.li
           key={item.id}
@@ -31,26 +31,26 @@ export default function Timeline({ items }: Props) {
         >
           <span
             aria-hidden="true"
-            className={`absolute -start-[7px] top-1 h-3 w-3 rounded-full ring-4 ring-bg ${
+            className={`ring-bg absolute -start-[7px] top-1 h-3 w-3 rounded-full ring-4 ${
               item.muted ? "bg-fg/30" : "bg-accent"
             }`}
           />
           <div className="flex flex-col gap-1">
-            <time className="font-mono text-xs uppercase tracking-wider text-fg/60">
+            <time className="text-fg/60 font-mono text-xs tracking-wider uppercase">
               {item.dateRange}
             </time>
-            <h3 className="font-serif text-xl md:text-2xl text-fg">
+            <h3 className="text-fg font-serif text-xl md:text-2xl">
               {item.title}
             </h3>
             {item.subtitle && (
-              <p className="text-sm text-fg/70">
+              <p className="text-fg/70 text-sm">
                 {item.subtitle}
                 {item.meta ? (
                   <span className="text-fg/40"> · {item.meta}</span>
                 ) : null}
               </p>
             )}
-            {item.body && <div className="mt-3 text-fg/80">{item.body}</div>}
+            {item.body && <div className="text-fg/80 mt-3">{item.body}</div>}
           </div>
         </motion.li>
       ))}

@@ -9,14 +9,14 @@ export default function Skills() {
   const { cv } = useCV();
 
   return (
-    <section id="skills" className="py-24 md:py-32 bg-fg/[0.02]">
+    <section id="skills" className="bg-fg/[0.02] py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6 lg:px-10">
         <SectionTitle
           eyebrow={t("sections.skillsEyebrow")}
           title={t("sections.skillsTitle")}
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-10">
+        <div className="grid gap-x-10 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           {cv.skills.map((group, gi) => (
             <motion.div
               key={group.name}
@@ -27,10 +27,10 @@ export default function Skills() {
               className="flex flex-col gap-4"
             >
               <header className="flex items-baseline gap-3">
-                <span className="font-mono text-xs text-accent">
+                <span className="text-accent font-mono text-xs">
                   {String(gi + 1).padStart(2, "0")}
                 </span>
-                <h3 className="font-serif text-xl text-fg">{group.name}</h3>
+                <h3 className="text-fg font-serif text-xl">{group.name}</h3>
               </header>
               <div className="flex flex-wrap gap-2">
                 {group.content.map((skill, si) => (

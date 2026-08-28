@@ -7,7 +7,7 @@ import Impressum from "./pages/Impressum";
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-bg text-fg antialiased selection:bg-accent/30 selection:text-fg">
+      <div className="bg-bg text-fg selection:bg-accent/30 selection:text-fg min-h-screen antialiased">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

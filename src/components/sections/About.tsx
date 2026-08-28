@@ -26,7 +26,7 @@ export default function About() {
           title={t("sections.aboutTitle")}
         />
 
-        <div className="grid lg:grid-cols-12 gap-10">
+        <div className="grid gap-10 lg:grid-cols-12">
           <motion.div
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -34,14 +34,14 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-7"
           >
-            <p className="text-lg md:text-xl text-fg/85 leading-relaxed">
+            <p className="text-fg/85 text-lg leading-relaxed md:text-xl">
               {cv.intro}
             </p>
 
-            <dl className="mt-10 grid sm:grid-cols-2 gap-x-8 gap-y-5">
+            <dl className="mt-10 grid gap-x-8 gap-y-5 sm:grid-cols-2">
               {facts.map((f) => (
                 <div key={f.label} className="flex flex-col gap-1">
-                  <dt className="font-mono text-[11px] uppercase tracking-wider text-fg/50">
+                  <dt className="text-fg/50 font-mono text-[11px] tracking-wider uppercase">
                     {f.label}
                   </dt>
                   <dd className="text-fg">{f.value}</dd>
@@ -57,19 +57,19 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="lg:col-span-5"
           >
-            <h3 className="font-mono text-xs uppercase tracking-[0.3em] text-accent mb-6">
+            <h3 className="text-accent mb-6 font-mono text-xs tracking-[0.3em] uppercase">
               {t("labels.languages")}
             </h3>
             <ul className="flex flex-col gap-5">
               {cv.languages.map((lang, i) => (
                 <li key={lang.name}>
-                  <div className="flex justify-between items-baseline mb-2">
+                  <div className="mb-2 flex items-baseline justify-between">
                     <span className="text-fg">{lang.name}</span>
-                    <span className="font-mono text-xs text-fg/60">
+                    <span className="text-fg/60 font-mono text-xs">
                       {lang.level}
                     </span>
                   </div>
-                  <div className="h-1 bg-fg/10 rounded-full overflow-hidden">
+                  <div className="bg-fg/10 h-1 overflow-hidden rounded-full">
                     <motion.div
                       initial={{ width: 0 }}
                       whileInView={{ width: `${lang.proficiency}%` }}
@@ -79,7 +79,7 @@ export default function About() {
                         delay: 0.2 + i * 0.15,
                         ease: "easeOut",
                       }}
-                      className="h-full bg-accent"
+                      className="bg-accent h-full"
                     />
                   </div>
                 </li>
