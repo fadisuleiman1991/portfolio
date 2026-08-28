@@ -6,12 +6,11 @@
   --color-bg: #0a1628;
   --color-fg: #f5f0e8;
   --color-accent: #f59e0b;
-  --color-accent-soft: rgba(245, 158, 11, 0.15);
-
-  --font-serif: "DM Serif Display", "Times New Roman", Georgia, serif;
+  --color-accent-soft: rgb(245 158 11 / 15%);
+  --font-serif: "DM Serif Display", "Times New Roman", georgia, serif;
   --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", monospace;
   --font-sans:
-    "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    "Inter", system-ui, -apple-system, "Segoe UI", roboto, sans-serif;
   --font-arabic: "IBM Plex Sans Arabic", "Noto Sans Arabic", sans-serif;
 }
 
@@ -19,12 +18,14 @@
   :root {
     --color-bg: #f5f0e8;
     --color-fg: #0a1628;
+
     color-scheme: light;
   }
 
   :root.dark {
     --color-bg: #0a1628;
     --color-fg: #f5f0e8;
+
     color-scheme: dark;
   }
 
@@ -36,10 +37,10 @@
   }
 
   body {
-    font-family: var(--font-sans);
-    background-color: var(--color-bg);
-    color: var(--color-fg);
     overflow-x: hidden;
+    font-family: var(--font-sans);
+    color: var(--color-fg);
+    background-color: var(--color-bg);
   }
 
   html[lang="ar"] body,
@@ -66,8 +67,8 @@
   }
 
   ::selection {
-    background-color: rgba(245, 158, 11, 0.3);
     color: var(--color-fg);
+    background-color: rgb(245 158 11 / 30%);
   }
 
   /* Focus visibility for keyboard users */
@@ -81,10 +82,10 @@
     *,
     *::before,
     *::after {
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
     }
   }
 }
@@ -93,24 +94,31 @@
   .bg-bg {
     background-color: var(--color-bg);
   }
+
   .text-bg {
     color: var(--color-bg);
   }
+
   .bg-fg {
     background-color: var(--color-fg);
   }
+
   .text-fg {
     color: var(--color-fg);
   }
+
   .bg-accent {
     background-color: var(--color-accent);
   }
+
   .text-accent {
     color: var(--color-accent);
   }
+
   .border-accent {
     border-color: var(--color-accent);
   }
+
   .ring-bg {
     --tw-ring-color: var(--color-bg);
   }
@@ -118,9 +126,11 @@
   .font-serif {
     font-family: var(--font-serif);
   }
+
   .font-mono {
     font-family: var(--font-mono);
   }
+
   .font-sans {
     font-family: var(--font-sans);
   }
