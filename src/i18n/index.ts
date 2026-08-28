@@ -33,9 +33,9 @@ i18n
   });
 
 function applyDocumentLang(lng: string) {
-  const lang = (SUPPORTED_LANGS.includes(lng as SupportedLang)
-    ? lng
-    : "de") as SupportedLang;
+  const lang = (
+    SUPPORTED_LANGS.includes(lng as SupportedLang) ? lng : "de"
+  ) as SupportedLang;
   const isRtl = RTL_LANGS.includes(lang);
   document.documentElement.lang = lang;
   document.documentElement.dir = isRtl ? "rtl" : "ltr";

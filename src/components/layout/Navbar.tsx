@@ -37,10 +37,10 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto max-w-6xl px-6 lg:px-10 h-16 flex items-center justify-between gap-6">
+      <div className="flex items-center justify-between gap-6 mx-auto max-w-6xl px-6 lg:px-10 h-16">
         <a
           href="#top"
-          className="font-serif text-lg tracking-tight text-fg hover:text-accent transition-colors"
+          className="transition-colors text-lg text-fg hover:text-accent font-serif tracking-tight"
         >
           Fadi<span className="text-accent">.</span>Suleiman
         </a>
@@ -53,9 +53,7 @@ export default function Navbar() {
                 <a
                   href={`#${s}`}
                   className={`px-3 py-2 font-mono text-xs uppercase tracking-wider transition-colors ${
-                    isActive
-                      ? "text-accent"
-                      : "text-fg/70 hover:text-fg"
+                    isActive ? "text-accent" : "text-fg/70 hover:text-fg"
                   }`}
                 >
                   {t(`nav.${s}`)}

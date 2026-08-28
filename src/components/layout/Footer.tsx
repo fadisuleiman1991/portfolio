@@ -30,7 +30,9 @@ export default function Footer() {
           <p className="font-mono text-xs text-fg/60">
             © {year} {cv.personalInfo.name}. {t("footer.rights")}
           </p>
-          <p className="font-mono text-xs text-fg/40">{t("footer.builtWith")}</p>
+          <p className="font-mono text-xs text-fg/40">
+            {t("footer.builtWith")}
+          </p>
         </div>
 
         <div className="flex items-center gap-4">

@@ -40,7 +40,13 @@ export const cvData: CV = {
     },
     {
       name: "Backend",
-      content: ["C#", "ASP.NET Core", "Java", "Jakarta EE (Java EE)", "Hibernate"],
+      content: [
+        "C#",
+        "ASP.NET Core",
+        "Java",
+        "Jakarta EE (Java EE)",
+        "Hibernate",
+      ],
     },
     {
       name: "Datenbanken",

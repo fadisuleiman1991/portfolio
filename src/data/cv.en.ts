@@ -40,7 +40,13 @@ export const cvData: CV = {
     },
     {
       name: "Backend",
-      content: ["C#", "ASP.NET Core", "Java", "Jakarta EE (Java EE)", "Hibernate"],
+      content: [
+        "C#",
+        "ASP.NET Core",
+        "Java",
+        "Jakarta EE (Java EE)",
+        "Hibernate",
+      ],
     },
     {
       name: "Databases",
@@ -128,7 +134,8 @@ export const cvData: CV = {
       name: "Mobility Service Management System",
       startDate: "06.2025",
       endDate: "11.2025",
-      description: "Android application for managing vehicles and mobility services.",
+      description:
+        "Android application for managing vehicles and mobility services.",
       role: "Technical product coordinator",
       technologies: ["Flutter", "NestJS"],
     },
@@ -181,9 +188,7 @@ export const cvData: CV = {
       name: "Java Training for Beginners",
       startDate: "11.2024",
       endDate: "02.2025",
-      responsibilities: [
-        "Designed and delivered Java fundamentals training",
-      ],
+      responsibilities: ["Designed and delivered Java fundamentals training"],
     },
     {
       name: "Career Reorientation & Application Qualification",

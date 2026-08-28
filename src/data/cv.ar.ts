@@ -40,7 +40,13 @@ export const cvData: CV = {
     },
     {
       name: "الخلفية",
-      content: ["C#", "ASP.NET Core", "Java", "Jakarta EE (Java EE)", "Hibernate"],
+      content: [
+        "C#",
+        "ASP.NET Core",
+        "Java",
+        "Jakarta EE (Java EE)",
+        "Hibernate",
+      ],
     },
     {
       name: "قواعد البيانات",
@@ -181,9 +187,7 @@ export const cvData: CV = {
       name: "تدريبات Java للمبتدئين",
       startDate: "11.2024",
       endDate: "02.2025",
-      responsibilities: [
-        "تصميم وتقديم تدريبات أساسيات Java",
-      ],
+      responsibilities: ["تصميم وتقديم تدريبات أساسيات Java"],
     },
     {
       name: "إعادة توجيه مهني وتأهيل للتقدّم للوظائف",
