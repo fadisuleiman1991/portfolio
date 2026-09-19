@@ -31,28 +31,28 @@ export default function Navbar() {
   return (
     <nav
       aria-label="Primary"
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-bg/85 border-fg/10 border-b backdrop-blur-md"
+          ? "bg-bg/85 backdrop-blur-md border-b border-fg/10"
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-6 px-6 lg:px-10">
+      <div className="flex items-center justify-between gap-6 mx-auto max-w-6xl px-6 lg:px-10 h-16">
         <a
           href="#top"
-          className="text-fg hover:text-accent font-serif text-lg tracking-tight transition-colors"
+          className="transition-colors text-lg text-fg hover:text-accent font-serif tracking-tight"
         >
           Fadi<span className="text-accent">.</span>Suleiman
         </a>
 
-        <ul className="hidden items-center gap-1 lg:flex">
+        <ul className="hidden lg:flex items-center gap-1">
           {SECTIONS.map((s) => {
             const isActive = active === s;
             return (
               <li key={s}>
                 <a
                   href={`#${s}`}
-                  className={`px-3 py-2 font-mono text-xs tracking-wider uppercase transition-colors ${
+                  className={`px-3 py-2 font-mono text-xs uppercase tracking-wider transition-colors ${
                     isActive ? "text-accent" : "text-fg/70 hover:text-fg"
                   }`}
                 >
@@ -63,14 +63,14 @@ export default function Navbar() {
           })}
         </ul>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden lg:flex items-center gap-3">
           <LanguageSwitcher />
           <ThemeToggle />
         </div>
 
         <button
           type="button"
-          className="text-fg inline-flex h-9 w-9 items-center justify-center lg:hidden"
+          className="lg:hidden inline-flex items-center justify-center w-9 h-9 text-fg"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
@@ -80,21 +80,21 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="border-fg/10 bg-bg/95 border-t backdrop-blur-md lg:hidden">
-          <ul className="flex flex-col gap-1 px-6 py-4">
+        <div className="lg:hidden border-t border-fg/10 bg-bg/95 backdrop-blur-md">
+          <ul className="px-6 py-4 flex flex-col gap-1">
             {SECTIONS.map((s) => (
               <li key={s}>
                 <a
                   href={`#${s}`}
                   onClick={() => setOpen(false)}
-                  className="text-fg/80 hover:text-accent block px-3 py-2 font-mono text-sm tracking-wider uppercase"
+                  className="block px-3 py-2 font-mono text-sm uppercase tracking-wider text-fg/80 hover:text-accent"
                 >
                   {t(`nav.${s}`)}
                 </a>
               </li>
             ))}
           </ul>
-          <div className="flex items-center gap-3 px-6 pb-4">
+          <div className="px-6 pb-4 flex items-center gap-3">
             <LanguageSwitcher />
             <ThemeToggle />
           </div>

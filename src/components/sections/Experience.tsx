@@ -18,7 +18,7 @@ export default function Experience() {
     muted: exp.isSecondaryJob,
     body:
       exp.responsibilities && exp.responsibilities.length > 0 ? (
-        <ul className="ms-5 flex list-outside list-disc flex-col gap-2">
+        <ul className="flex flex-col gap-2 list-disc list-outside ms-5">
           {exp.responsibilities.map((r, ri) => (
             <li key={ri} className="text-fg/75 text-sm md:text-base">
               {r}

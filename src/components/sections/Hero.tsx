@@ -22,11 +22,11 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-screen items-center overflow-hidden pt-24 pb-16"
+      className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden"
     >
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.04]"
+        className="absolute inset-0 -z-10 opacity-[0.04] pointer-events-none"
         style={{
           backgroundImage:
             "linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)",
@@ -36,7 +36,7 @@ export default function Hero() {
 
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
+        className="absolute inset-0 -z-10 pointer-events-none overflow-hidden"
       >
         {FLOATING_TAGS.map((tag, i) => (
           <motion.span
@@ -52,7 +52,7 @@ export default function Hero() {
                 delay: i * 0.2,
               },
             }}
-            className="text-fg absolute font-mono text-xs md:text-sm"
+            className="absolute font-mono text-xs md:text-sm text-fg"
             style={{
               top: `${10 + ((i * 11) % 75)}%`,
               left: `${5 + ((i * 17) % 85)}%`,
@@ -63,13 +63,13 @@ export default function Hero() {
         ))}
       </div>
 
-      <div className="mx-auto grid w-full max-w-6xl items-center gap-10 px-6 lg:grid-cols-12 lg:gap-16 lg:px-10">
-        <div className="flex flex-col gap-6 lg:col-span-7">
+      <div className="mx-auto max-w-6xl w-full px-6 lg:px-10 grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        <div className="lg:col-span-7 flex flex-col gap-6">
           <motion.span
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-accent font-mono text-xs tracking-[0.3em] uppercase"
+            className="font-mono text-xs uppercase tracking-[0.3em] text-accent"
           >
             {t("hero.greeting")}
           </motion.span>
@@ -78,7 +78,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-fg font-serif text-5xl leading-[1.05] md:text-6xl lg:text-7xl"
+            className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-fg"
           >
             {cv.personalInfo.name.split(" ").map((part, i) => (
               <motion.span
@@ -97,7 +97,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-accent font-mono text-sm md:text-base"
+            className="font-mono text-sm md:text-base text-accent"
           >
             // {cv.personalInfo.jobTitle}
           </motion.p>
@@ -106,7 +106,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="text-fg/75 max-w-xl text-base leading-relaxed md:text-lg"
+            className="max-w-xl text-base md:text-lg text-fg/75 leading-relaxed"
           >
             {cv.personalInfo.tagline}
           </motion.p>
@@ -119,7 +119,7 @@ export default function Hero() {
           >
             <a
               href="#contact"
-              className="bg-accent text-bg hover:bg-accent/90 inline-flex items-center gap-2 px-5 py-3 font-mono text-xs tracking-wider uppercase transition-colors"
+              className="inline-flex items-center gap-2 bg-accent text-bg px-5 py-3 font-mono text-xs uppercase tracking-wider hover:bg-accent/90 transition-colors"
             >
               <Mail size={16} />
               {t("hero.ctaContact")}
@@ -127,7 +127,7 @@ export default function Hero() {
             <a
               href="/cv-fadi-suleiman.pdf"
               download
-              className="border-fg/30 text-fg hover:border-accent hover:text-accent inline-flex items-center gap-2 border px-5 py-3 font-mono text-xs tracking-wider uppercase transition-colors"
+              className="inline-flex items-center gap-2 border border-fg/30 text-fg px-5 py-3 font-mono text-xs uppercase tracking-wider hover:border-accent hover:text-accent transition-colors"
             >
               <Download size={16} />
               {t("hero.ctaDownload")}
@@ -139,23 +139,23 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="relative flex justify-center lg:col-span-5 lg:justify-end"
+          className="lg:col-span-5 relative flex justify-center lg:justify-end"
         >
           <div className="relative">
             <div
               aria-hidden="true"
-              className="border-accent/50 absolute -inset-3 translate-x-3 translate-y-3 border"
+              className="absolute -inset-3 border border-accent/50 translate-x-3 translate-y-3"
             />
             <div
               aria-hidden="true"
-              className="border-fg/20 absolute -inset-3 -translate-x-3 -translate-y-3 border"
+              className="absolute -inset-3 border border-fg/20 -translate-x-3 -translate-y-3"
             />
-            <div className="bg-fg/5 relative h-80 w-64 overflow-hidden md:h-96 md:w-72">
+            <div className="relative w-64 h-80 md:w-72 md:h-96 overflow-hidden bg-fg/5">
               <img
                 src={cv.personalInfo.profileImage}
                 alt={cv.personalInfo.name}
                 loading="eager"
-                className="h-full w-full object-cover grayscale transition-all duration-500 hover:grayscale-0"
+                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
                 onError={(e) => {
                   (e.currentTarget as HTMLImageElement).style.display = "none";
                 }}
@@ -174,7 +174,7 @@ export default function Hero() {
           y: { duration: 2, repeat: Infinity, ease: "easeInOut" },
         }}
         aria-label={t("hero.scrollHint")}
-        className="text-fg/50 hover:text-accent absolute start-1/2 bottom-8 -translate-x-1/2 transition-colors"
+        className="absolute bottom-8 start-1/2 -translate-x-1/2 text-fg/50 hover:text-accent transition-colors"
       >
         <ArrowDown size={20} />
       </motion.a>

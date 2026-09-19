@@ -33,15 +33,15 @@ export default function Education() {
           title={t("sections.educationTitle")}
         />
 
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           <div>
-            <h3 className="text-accent mb-8 font-mono text-xs tracking-[0.3em] uppercase">
+            <h3 className="font-mono text-xs uppercase tracking-[0.3em] text-accent mb-8">
               {t("labels.education")}
             </h3>
             <Timeline items={educationItems} />
           </div>
           <div>
-            <h3 className="text-accent mb-8 font-mono text-xs tracking-[0.3em] uppercase">
+            <h3 className="font-mono text-xs uppercase tracking-[0.3em] text-accent mb-8">
               {t("labels.trainings")}
             </h3>
             <Timeline items={trainingItems} />

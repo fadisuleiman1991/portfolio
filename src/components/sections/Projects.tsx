@@ -23,7 +23,7 @@ export default function Projects() {
     : cv.projects;
 
   return (
-    <section id="projects" className="bg-fg/[0.02] py-24 md:py-32">
+    <section id="projects" className="py-24 md:py-32 bg-fg/[0.02]">
       <div className="mx-auto max-w-6xl px-6 lg:px-10">
         <SectionTitle
           eyebrow={t("sections.projectsEyebrow")}
@@ -34,7 +34,7 @@ export default function Projects() {
           <button
             type="button"
             onClick={() => setFilter(null)}
-            className={`border px-3 py-1 font-mono text-xs tracking-wider uppercase transition-colors ${
+            className={`px-3 py-1 font-mono text-xs uppercase tracking-wider border transition-colors ${
               filter === null
                 ? "border-accent text-accent"
                 : "border-fg/15 text-fg/60 hover:text-fg"
@@ -47,7 +47,7 @@ export default function Projects() {
               key={tech}
               type="button"
               onClick={() => setFilter(tech)}
-              className={`border px-3 py-1 font-mono text-xs tracking-wider transition-colors ${
+              className={`px-3 py-1 font-mono text-xs tracking-wider border transition-colors ${
                 filter === tech
                   ? "border-accent text-accent"
                   : "border-fg/15 text-fg/60 hover:text-fg"
@@ -58,7 +58,7 @@ export default function Projects() {
           ))}
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid md:grid-cols-2 gap-6">
           {visible.map((p, i) => (
             <motion.article
               key={p.name}
@@ -67,18 +67,18 @@ export default function Projects() {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: i * 0.05 }}
               whileHover={{ y: -4 }}
-              className="group border-fg/10 bg-bg hover:border-accent/40 relative flex flex-col gap-4 border p-6 transition-all hover:shadow-[0_20px_40px_-25px_rgba(245,158,11,0.4)] md:p-8"
+              className="group relative flex flex-col gap-4 p-6 md:p-8 border border-fg/10 bg-bg hover:border-accent/40 hover:shadow-[0_20px_40px_-25px_rgba(245,158,11,0.4)] transition-all"
             >
               <header className="flex items-start justify-between gap-4">
                 <div>
-                  <time className="text-fg/50 font-mono text-[11px] tracking-wider uppercase">
+                  <time className="font-mono text-[11px] uppercase tracking-wider text-fg/50">
                     {p.startDate} — {p.endDate}
                   </time>
-                  <h3 className="text-fg mt-1 font-serif text-xl md:text-2xl">
+                  <h3 className="mt-1 font-serif text-xl md:text-2xl text-fg">
                     {p.name}
                   </h3>
                 </div>
-                <div className="flex items-center gap-2 opacity-0 transition-opacity group-hover:opacity-100">
+                <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
                   {p.link && (
                     <a
                       href={p.link}
@@ -107,13 +107,13 @@ export default function Projects() {
               <p className="text-fg/80 text-sm md:text-base">{p.description}</p>
 
               <div className="flex flex-col gap-1">
-                <span className="text-fg/50 font-mono text-[11px] tracking-wider uppercase">
+                <span className="font-mono text-[11px] uppercase tracking-wider text-fg/50">
                   {t("labels.role")}
                 </span>
                 <span className="text-fg/85 text-sm">{p.role}</span>
               </div>
 
-              <div className="mt-auto flex flex-wrap gap-2 pt-2">
+              <div className="flex flex-wrap gap-2 mt-auto pt-2">
                 {p.technologies.map((tt) => (
                   <Tag key={tt}>{tt}</Tag>
                 ))}

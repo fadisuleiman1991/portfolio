@@ -10,21 +10,21 @@ export default function Impressum() {
       <div className="mx-auto max-w-3xl px-6 lg:px-10">
         <Link
           to="/"
-          className="text-fg/60 hover:text-accent mb-10 inline-flex items-center gap-2 font-mono text-xs tracking-wider uppercase"
+          className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-fg/60 hover:text-accent mb-10"
         >
           <ArrowLeft size={14} />
           {t("impressum.backHome")}
         </Link>
 
-        <h1 className="text-fg mb-6 font-serif text-4xl md:text-5xl">
+        <h1 className="font-serif text-4xl md:text-5xl text-fg mb-6">
           {t("impressum.title")}
         </h1>
 
         <p className="text-fg/75 mb-10">{t("impressum.placeholder")}</p>
 
-        <section className="text-fg/80 space-y-6">
+        <section className="space-y-6 text-fg/80">
           <div>
-            <h2 className="text-accent mb-2 font-mono text-xs tracking-[0.3em] uppercase">
+            <h2 className="font-mono text-xs uppercase tracking-[0.3em] text-accent mb-2">
               Angaben gemäß § 5 TMG
             </h2>
             <p>
@@ -39,7 +39,7 @@ export default function Impressum() {
           </div>
 
           <div>
-            <h2 className="text-accent mb-2 font-mono text-xs tracking-[0.3em] uppercase">
+            <h2 className="font-mono text-xs uppercase tracking-[0.3em] text-accent mb-2">
               Kontakt
             </h2>
             <p>
@@ -50,13 +50,13 @@ export default function Impressum() {
           </div>
 
           <div>
-            <h2 className="text-accent mb-2 font-mono text-xs tracking-[0.3em] uppercase">
+            <h2 className="font-mono text-xs uppercase tracking-[0.3em] text-accent mb-2">
               Verantwortlich für den Inhalt
             </h2>
             <p>Fadi Suleiman</p>
           </div>
 
-          <p className="text-fg/50 border-fg/10 border-t pt-6 text-xs">
+          <p className="text-xs text-fg/50 pt-6 border-t border-fg/10">
             Hinweis: Diese Angaben sind ein Platzhalter und müssen vor
             Veröffentlichung rechtssicher vervollständigt werden.
           </p>

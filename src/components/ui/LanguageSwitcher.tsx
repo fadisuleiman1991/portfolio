@@ -15,7 +15,7 @@ export default function LanguageSwitcher() {
     <div
       role="group"
       aria-label={t("nav.home")}
-      className="border-fg/15 inline-flex items-center overflow-hidden rounded-sm border font-mono text-xs"
+      className="inline-flex items-center border border-fg/15 rounded-sm overflow-hidden font-mono text-xs"
     >
       {SUPPORTED_LANGS.map((lng) => {
         const isActive = lng === current;

@@ -16,7 +16,7 @@ export default function SectionTitle({
   return (
     <header
       id={id}
-      className={`mb-12 flex flex-col gap-3 md:mb-16 ${
+      className={`mb-12 md:mb-16 flex flex-col gap-3 ${
         align === "center" ? "items-center text-center" : "items-start"
       }`}
     >
@@ -26,7 +26,7 @@ export default function SectionTitle({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.6 }}
           transition={{ duration: 0.4 }}
-          className="text-accent font-mono text-xs tracking-[0.3em] uppercase"
+          className="font-mono text-xs uppercase tracking-[0.3em] text-accent"
         >
           {eyebrow}
         </motion.span>
@@ -36,7 +36,7 @@ export default function SectionTitle({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.5 }}
         transition={{ duration: 0.6, delay: 0.05 }}
-        className="text-fg font-serif text-4xl leading-tight md:text-5xl lg:text-6xl"
+        className="font-serif text-4xl md:text-5xl lg:text-6xl leading-tight text-fg"
       >
         {title}
       </motion.h2>
@@ -45,7 +45,7 @@ export default function SectionTitle({
         whileInView={{ width: "4rem" }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="bg-accent h-px"
+        className="h-px bg-accent"
         aria-hidden="true"
       />
     </header>

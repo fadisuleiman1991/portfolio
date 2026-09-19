@@ -23,14 +23,14 @@ export default function Footer() {
   };
 
   return (
-    <footer className="border-fg/10 bg-bg border-t">
-      <div className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-10 md:flex-row md:items-center md:justify-between lg:px-10">
+    <footer className="border-t border-fg/10 bg-bg">
+      <div className="mx-auto max-w-6xl px-6 lg:px-10 py-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
         <div className="flex flex-col gap-1">
-          <p className="text-fg font-serif text-lg">{cv.personalInfo.name}</p>
-          <p className="text-fg/60 font-mono text-xs">
+          <p className="font-serif text-lg text-fg">{cv.personalInfo.name}</p>
+          <p className="font-mono text-xs text-fg/60">
             © {year} {cv.personalInfo.name}. {t("footer.rights")}
           </p>
-          <p className="text-fg/40 font-mono text-xs">
+          <p className="font-mono text-xs text-fg/40">
             {t("footer.builtWith")}
           </p>
         </div>
@@ -57,7 +57,7 @@ export default function Footer() {
           ))}
           <Link
             to="/impressum"
-            className="text-fg/60 hover:text-accent ms-4 font-mono text-xs tracking-wider uppercase"
+            className="font-mono text-xs uppercase tracking-wider text-fg/60 hover:text-accent ms-4"
           >
             {t("nav.impressum")}
           </Link>

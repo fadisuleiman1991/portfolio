@@ -8,7 +8,7 @@ export default function Activities() {
   const { cv } = useCV();
 
   return (
-    <section id="activities" className="bg-fg/[0.02] py-24 md:py-32">
+    <section id="activities" className="py-24 md:py-32 bg-fg/[0.02]">
       <div className="mx-auto max-w-6xl px-6 lg:px-10">
         <SectionTitle
           eyebrow={t("sections.activitiesEyebrow")}
@@ -23,19 +23,19 @@ export default function Activities() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: i * 0.05 }}
-              className="border-fg/10 grid gap-4 border-t py-8 last:border-b lg:grid-cols-12 lg:gap-8"
+              className="grid lg:grid-cols-12 gap-4 lg:gap-8 py-8 border-t border-fg/10 last:border-b"
             >
               <div className="lg:col-span-3">
-                <time className="text-fg/60 font-mono text-xs tracking-wider uppercase">
+                <time className="font-mono text-xs uppercase tracking-wider text-fg/60">
                   {a.startDate} — {a.endDate}
                 </time>
               </div>
               <div className="lg:col-span-9">
-                <h3 className="text-fg mb-3 font-serif text-xl md:text-2xl">
+                <h3 className="font-serif text-xl md:text-2xl text-fg mb-3">
                   {a.name}
                 </h3>
                 {a.responsibilities && a.responsibilities.length > 0 && (
-                  <ul className="ms-5 flex list-outside list-disc flex-col gap-1.5">
+                  <ul className="flex flex-col gap-1.5 list-disc list-outside ms-5">
                     {a.responsibilities.map((r, ri) => (
                       <li key={ri} className="text-fg/75 text-sm md:text-base">
                         {r}
