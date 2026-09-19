@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
 
@@ -25,15 +26,17 @@ export default function Timeline({ items }: Props) {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.5, delay: i * 0.05 }}
-          className={`relative ps-6 pb-10 last:pb-0 ${
-            item.muted ? "opacity-70" : ""
-          }`}
+          className={clsx(
+            "relative ps-6 pb-10 last:pb-0",
+            item.muted ? "opacity-70" : "",
+          )}
         >
           <span
             aria-hidden="true"
-            className={`absolute -start-[7px] top-1 h-3 w-3 rounded-full ring-4 ring-bg ${
-              item.muted ? "bg-fg/30" : "bg-accent"
-            }`}
+            className={clsx(
+              "absolute -start-[7px] top-1 h-3 w-3 rounded-full ring-4 ring-bg",
+              item.muted ? "bg-fg/30" : "bg-accent",
+            )}
           />
           <div className="flex flex-col gap-1">
             <time className="font-mono text-xs uppercase tracking-wider text-fg/60">

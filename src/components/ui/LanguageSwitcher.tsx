@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { SUPPORTED_LANGS, type SupportedLang } from "../../i18n";
+import clsx from "clsx";
 
 const LABELS: Record<SupportedLang, string> = {
   de: "DE",
@@ -25,11 +26,12 @@ export default function LanguageSwitcher() {
             type="button"
             onClick={() => i18n.changeLanguage(lng)}
             aria-pressed={isActive}
-            className={`px-2.5 py-1.5 transition-colors cursor-pointer ${
+            className={clsx(
+              "px-2.5 py-1.5 transition-colors cursor-pointer",
               isActive
                 ? "bg-accent text-bg"
-                : "text-fg/70 hover:bg-fg/5 hover:text-fg"
-            }`}
+                : "text-fg/70 hover:bg-fg/5 hover:text-fg",
+            )}
           >
             {LABELS[lng]}
           </button>

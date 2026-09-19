@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { ExternalLink } from "lucide-react";
+import clsx from "clsx";
 import { GithubIcon } from "../ui/BrandIcons";
 import SectionTitle from "../ui/SectionTitle";
 import Tag from "../ui/Tag";
@@ -34,11 +35,12 @@ export default function Projects() {
           <button
             type="button"
             onClick={() => setFilter(null)}
-            className={`px-3 py-1 font-mono text-xs uppercase tracking-wider border transition-colors ${
+            className={clsx(
+              "px-3 py-1 font-mono text-xs uppercase tracking-wider border transition-colors",
               filter === null
                 ? "border-accent text-accent"
-                : "border-fg/15 text-fg/60 hover:text-fg"
-            }`}
+                : "border-fg/15 text-fg/60 hover:text-fg",
+            )}
           >
             All
           </button>
@@ -47,11 +49,12 @@ export default function Projects() {
               key={tech}
               type="button"
               onClick={() => setFilter(tech)}
-              className={`px-3 py-1 font-mono text-xs tracking-wider border transition-colors ${
+              className={clsx(
+                "px-3 py-1 font-mono text-xs tracking-wider border transition-colors",
                 filter === tech
                   ? "border-accent text-accent"
-                  : "border-fg/15 text-fg/60 hover:text-fg"
-              }`}
+                  : "border-fg/15 text-fg/60 hover:text-fg",
+              )}
             >
               {tech}
             </button>

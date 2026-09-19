@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Menu, X } from "lucide-react";
+import clsx from "clsx";
 import LanguageSwitcher from "../ui/LanguageSwitcher";
 import ThemeToggle from "../ui/ThemeToggle";
 import { useScrollSpy } from "../../hooks/useScrollSpy";
@@ -31,11 +32,12 @@ export default function Navbar() {
   return (
     <nav
       aria-label="Primary"
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
+      className={clsx(
+        "fixed top-0 inset-x-0 z-50 transition-all duration-300",
         scrolled
           ? "bg-bg/85 backdrop-blur-md border-b border-fg/10"
-          : "bg-transparent"
-      }`}
+          : "bg-transparent",
+      )}
     >
       <div className="flex items-center justify-between gap-6 mx-auto max-w-6xl px-6 lg:px-10 h-16">
         <a
@@ -52,9 +54,10 @@ export default function Navbar() {
               <li key={s}>
                 <a
                   href={`#${s}`}
-                  className={`px-3 py-2 font-mono text-xs uppercase tracking-wider transition-colors ${
-                    isActive ? "text-accent" : "text-fg/70 hover:text-fg"
-                  }`}
+                  className={clsx(
+                    "px-3 py-2 font-mono text-xs uppercase tracking-wider transition-colors",
+                    isActive ? "text-accent" : "text-fg/70 hover:text-fg",
+                  )}
                 >
                   {t(`nav.${s}`)}
                 </a>
@@ -70,7 +73,7 @@ export default function Navbar() {
 
         <button
           type="button"
-          className="lg:hidden inline-flex items-center justify-center w-9 h-9 text-fg"
+          className="lg:hidden inline-flex items-center justify-center w-9 h-9 text-fg cursor-pointer"
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}

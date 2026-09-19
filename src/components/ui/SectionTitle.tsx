@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { motion } from "framer-motion";
 
 interface Props {
@@ -16,9 +17,10 @@ export default function SectionTitle({
   return (
     <header
       id={id}
-      className={`mb-12 md:mb-16 flex flex-col gap-3 ${
-        align === "center" ? "items-center text-center" : "items-start"
-      }`}
+      className={clsx(
+        "mb-12 md:mb-16 flex flex-col gap-3",
+        align === "center" ? "items-center text-center" : "items-start",
+      )}
     >
       {eyebrow && (
         <motion.span
