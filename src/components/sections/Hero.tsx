@@ -11,8 +11,8 @@ const FLOATING_TAGS = [
   "Docker",
   "Tailwind",
   "Jest",
-  "Cypress",
-  "Azure",
+  "Java",
+  "Azure DevOps",
 ];
 
 export default function Hero() {
@@ -26,7 +26,7 @@ export default function Hero() {
     >
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 opacity-[0.04] pointer-events-none"
+        className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
           backgroundImage:
             "linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)",
@@ -36,7 +36,7 @@ export default function Hero() {
 
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 pointer-events-none overflow-hidden"
+        className="absolute inset-0 pointer-events-none overflow-hidden"
       >
         {FLOATING_TAGS.map((tag, i) => (
           <motion.span
@@ -150,7 +150,7 @@ export default function Hero() {
               aria-hidden="true"
               className="absolute -inset-3 border border-fg/20 -translate-x-3 -translate-y-3"
             />
-            <div className="relative w-64 h-80 md:w-72 md:h-96 overflow-hidden bg-fg/5">
+            <div className="w-64 h-80 md:w-72 md:h-96 overflow-hidden bg-fg/5">
               <img
                 src={cv.personalInfo.profileImage}
                 alt={cv.personalInfo.name}

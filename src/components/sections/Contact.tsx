@@ -86,7 +86,7 @@ export default function Contact() {
 
           <div className="lg:col-span-5">
             <h3 className="font-mono text-xs uppercase tracking-[0.3em] text-accent mb-6">
-              Online
+              {t("labels.online")}
             </h3>
             <ul className="flex flex-col gap-3">
               {cv.onlineProfiles.map((p, i) => (

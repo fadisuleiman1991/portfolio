@@ -6,9 +6,7 @@ type Theme = "dark" | "light";
 
 function getInitialTheme(): Theme {
   if (typeof window === "undefined") return "dark";
-  const stored = localStorage.getItem("theme") as Theme | null;
-  if (stored === "dark" || stored === "light") return stored;
-  return "dark";
+  return localStorage.getItem("theme") === "light" ? "light" : "dark";
 }
 
 export default function ThemeToggle() {

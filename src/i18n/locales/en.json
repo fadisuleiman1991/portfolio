@@ -52,7 +52,8 @@
     "email": "Email",
     "phone": "Phone",
     "city": "City",
-    "country": "Country"
+    "country": "Country",
+    "online": "Online"
   },
   "footer": {
     "rights": "All rights reserved.",
