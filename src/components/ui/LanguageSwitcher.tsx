@@ -25,7 +25,7 @@ export default function LanguageSwitcher() {
             type="button"
             onClick={() => i18n.changeLanguage(lng)}
             aria-pressed={isActive}
-            className={`px-2.5 py-1.5 transition-colors ${
+            className={`px-2.5 py-1.5 transition-colors cursor-pointer ${
               isActive
                 ? "bg-accent text-bg"
                 : "text-fg/70 hover:bg-fg/5 hover:text-fg"

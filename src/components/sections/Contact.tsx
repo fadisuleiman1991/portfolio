@@ -6,8 +6,9 @@ import SectionTitle from "../ui/SectionTitle";
 import { useCV } from "../../hooks/useCV";
 
 export default function Contact() {
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
   const { cv } = useCV();
+  const isRTL = i18n.dir() === "rtl";
 
   const iconFor = (name: string) => {
     switch (name) {
@@ -56,7 +57,7 @@ export default function Contact() {
             {contactItems.map((c, i) => (
               <motion.div
                 key={c.label}
-                initial={{ opacity: 0, x: -12 }}
+                initial={{ opacity: 0, x: isRTL ? 12 : -12 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
@@ -92,7 +93,7 @@ export default function Contact() {
               {cv.onlineProfiles.map((p, i) => (
                 <motion.li
                   key={p.name}
-                  initial={{ opacity: 0, x: 12 }}
+                  initial={{ opacity: 0, x: isRTL ? 12 : -12 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.5, delay: i * 0.08 }}
