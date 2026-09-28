@@ -61,7 +61,8 @@
   },
   "impressum": {
     "title": "Impressum",
-    "placeholder": "Diese Seite enthält das gesetzlich vorgeschriebene Impressum gemäß § 5 TMG. Inhalte werden in Kürze ergänzt.",
+    "providerInformation": "Angaben gemäß § 5 DDG",
+    "placeholder": "Diese Seite enthält das gesetzlich vorgeschriebene Impressum gemäß § 5 DDG. Inhalte werden in Kürze ergänzt.",
     "backHome": "Zurück zur Startseite"
   },
   "language": {

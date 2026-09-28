@@ -13,8 +13,13 @@ export interface PersonalInfo {
 export interface Contact {
   email: string;
   phone: string;
-  city: string;
-  country: string;
+  address: {
+    street: string;
+    hausnumber: string;
+    postalCode: string;
+    city: string;
+    country: string;
+  };
 }
 
 export interface SkillGroup {

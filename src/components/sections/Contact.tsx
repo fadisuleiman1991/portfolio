@@ -39,7 +39,7 @@ export default function Contact() {
     {
       icon: <MapPin size={18} />,
       label: t("labels.location"),
-      value: `${cv.contact.city}, ${cv.contact.country}`,
+      value: `${cv.contact.address.city}, ${cv.contact.address.country}`,
       href: null,
     },
   ];

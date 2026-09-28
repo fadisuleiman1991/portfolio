@@ -21,6 +21,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const active = useScrollSpy([...SECTIONS]);
+  const isImpressum = location.pathname === "/impressum";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -41,30 +42,32 @@ export default function Navbar() {
     >
       <div className="flex items-center justify-between gap-6 mx-auto max-w-6xl px-6 lg:px-10 h-16">
         <a
-          href="#top"
+          href="/"
           className="transition-colors text-lg text-fg hover:text-accent font-serif tracking-tight"
         >
           Fadi<span className="text-accent">.</span>Suleiman
         </a>
 
-        <ul className="hidden lg:flex items-center gap-1">
-          {SECTIONS.map((s) => {
-            const isActive = active === s;
-            return (
-              <li key={s}>
-                <a
-                  href={`#${s}`}
-                  className={clsx(
-                    "px-3 py-2 font-mono text-xs uppercase tracking-wider transition-colors",
-                    isActive ? "text-accent" : "text-fg/70 hover:text-fg",
-                  )}
-                >
-                  {t(`nav.${s}`)}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
+        {!isImpressum && (
+          <ul className="hidden lg:flex items-center gap-1">
+            {SECTIONS.map((s) => {
+              const isActive = active === s;
+              return (
+                <li key={s}>
+                  <a
+                    href={`#${s}`}
+                    className={clsx(
+                      "px-3 py-2 font-mono text-xs uppercase tracking-wider transition-colors",
+                      isActive ? "text-accent" : "text-fg/70 hover:text-fg",
+                    )}
+                  >
+                    {t(`nav.${s}`)}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        )}
 
         <div className="hidden lg:flex items-center gap-3">
           <LanguageSwitcher />
@@ -84,20 +87,22 @@ export default function Navbar() {
 
       {open && (
         <div className="lg:hidden border-t border-fg/10 bg-bg/95 backdrop-blur-md">
-          <ul className="px-6 py-4 flex flex-col gap-1">
-            {SECTIONS.map((s) => (
-              <li key={s}>
-                <a
-                  href={`#${s}`}
-                  onClick={() => setOpen(false)}
-                  className="block px-3 py-2 font-mono text-sm uppercase tracking-wider text-fg/80 hover:text-accent"
-                >
-                  {t(`nav.${s}`)}
-                </a>
-              </li>
-            ))}
-          </ul>
-          <div className="px-6 pb-4 flex items-center gap-3">
+          {!isImpressum && (
+            <ul className="px-6 py-4 flex flex-col gap-1">
+              {SECTIONS.map((s) => (
+                <li key={s}>
+                  <a
+                    href={`#${s}`}
+                    onClick={() => setOpen(false)}
+                    className="block px-3 py-2 font-mono text-sm uppercase tracking-wider text-fg/80 hover:text-accent"
+                  >
+                    {t(`nav.${s}`)}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+          <div className="px-6 py-4 flex items-center gap-3">
             <LanguageSwitcher />
             <ThemeToggle />
           </div>

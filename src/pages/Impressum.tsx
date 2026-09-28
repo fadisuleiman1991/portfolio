@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ArrowLeft } from "lucide-react";
+import { useCV } from "../hooks/useCV";
 
 export default function Impressum() {
   const { t } = useTranslation();
+  const { cv } = useCV();
 
   return (
     <main className="min-h-screen pt-32 pb-24">
@@ -20,46 +22,43 @@ export default function Impressum() {
           {t("impressum.title")}
         </h1>
 
-        <p className="text-fg/75 mb-10">{t("impressum.placeholder")}</p>
-
         <section className="space-y-6 text-fg/80">
           <div>
             <h2 className="font-mono text-xs uppercase tracking-[0.3em] text-accent mb-2">
-              Angaben gemäß § 5 TMG
+              {t("impressum.providerInformation")}
             </h2>
-            <p>
-              Fadi Suleiman
+
+            <address className="not-italic">
+              {cv.personalInfo.name}
               <br />
-              Friedrich-Ebert-Str. 254
+              {cv.contact.address.street} {cv.contact.address.hausnumber}
               <br />
-              47139 Duisburg
+              {cv.contact.address.postalCode} {cv.contact.address.city}
               <br />
-              Deutschland
-            </p>
+              {cv.contact.address.country}
+            </address>
           </div>
 
           <div>
             <h2 className="font-mono text-xs uppercase tracking-[0.3em] text-accent mb-2">
-              Kontakt
+              {t("sections.contactTitle")}
             </h2>
+
             <p>
-              E-Mail: info@fadisuleiman.com
+              {t("labels.email")}:{" "}
+              <a
+                href={`mailto:${cv.contact.email}`}
+                className="hover:text-accent"
+              >
+                {cv.contact.email}
+              </a>
               <br />
-              Telefon: +49 1577 3594045
+              {t("labels.phone")}:{" "}
+              <a href={`tel:${cv.contact.phone}`} className="hover:text-accent">
+                {cv.contact.phone}
+              </a>
             </p>
           </div>
-
-          <div>
-            <h2 className="font-mono text-xs uppercase tracking-[0.3em] text-accent mb-2">
-              Verantwortlich für den Inhalt
-            </h2>
-            <p>Fadi Suleiman</p>
-          </div>
-
-          <p className="text-xs text-fg/50 pt-6 border-t border-fg/10">
-            Hinweis: Diese Angaben sind ein Platzhalter und müssen vor
-            Veröffentlichung rechtssicher vervollständigt werden.
-          </p>
         </section>
       </div>
     </main>

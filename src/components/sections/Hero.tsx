@@ -16,8 +16,9 @@ const FLOATING_TAGS = [
 ];
 
 export default function Hero() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { cv } = useCV();
+  const isRTL = i18n.dir() === "rtl";
 
   return (
     <section
@@ -28,8 +29,7 @@ export default function Hero() {
         aria-hidden="true"
         className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
-          backgroundImage:
-            "linear-gradient(to right, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)",
+          backgroundImage: `linear-gradient(to ${isRTL ? "left" : "right"}, currentColor 1px, transparent 1px), linear-gradient(to bottom, currentColor 1px, transparent 1px)`,
           backgroundSize: "64px 64px",
         }}
       />
@@ -54,8 +54,8 @@ export default function Hero() {
             }}
             className="absolute font-mono text-xs md:text-sm text-fg"
             style={{
-              top: `${10 + ((i * 11) % 75)}%`,
-              left: `${5 + ((i * 17) % 85)}%`,
+              top: `${10 + (((i + 1) * 11) % 75)}%`,
+              insetInlineStart: `${5 + (((i + 1) * 17) % 85)}%`,
             }}
           >
             {tag}

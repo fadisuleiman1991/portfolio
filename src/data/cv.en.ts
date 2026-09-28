@@ -16,8 +16,13 @@ export const cvData: CV = {
   contact: {
     email: "info@fadisuleiman.com",
     phone: "+49 1577 3594045",
-    city: "Duisburg",
-    country: "Germany",
+    address: {
+      street: "Friedrich-Ebert-Str.",
+      hausnumber: "254",
+      postalCode: "47139",
+      city: "Duisburg",
+      country: "Germany",
+    },
   },
   intro:
     "Web developer with several years of experience in the agile development of modern web applications for the German market. Focus on Angular, React, TypeScript as well as .NET and Java back-ends. I value clean architecture, test coverage, and readable code.",

@@ -16,8 +16,13 @@ export const cvData: CV = {
   contact: {
     email: "info@fadisuleiman.com",
     phone: "+49 1577 3594045",
-    city: "دويسبورغ",
-    country: "ألمانيا",
+    address: {
+      street: "Friedrich-Ebert-Str.",
+      hausnumber: "254",
+      postalCode: "47139",
+      city: "دويسبورغ",
+      country: "ألمانيا",
+    },
   },
   intro:
     "مطوّر ويب يمتلك سنوات من الخبرة في تطوير تطبيقات الويب الحديثة بمنهجية رشيقة للسوق الألماني. التركيز على Angular وReact وTypeScript بالإضافة إلى خلفيات .NET وJava. أهتمّ بالهندسة النظيفة وتغطية الاختبارات وكتابة شيفرة مقروءة.",

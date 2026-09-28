@@ -16,8 +16,13 @@ export const cvData: CV = {
   contact: {
     email: "info@fadisuleiman.com",
     phone: "+49 1577 3594045",
-    city: "Duisburg",
-    country: "Deutschland",
+    address: {
+      street: "Friedrich-Ebert-Str.",
+      hausnumber: "254",
+      postalCode: "47139",
+      city: "Duisburg",
+      country: "Deutschland",
+    },
   },
   intro:
     "Webentwickler mit mehrjähriger Erfahrung in der agilen Entwicklung moderner Webanwendungen für den deutschen Markt. Schwerpunkte: Angular, React, TypeScript sowie .NET- und Java-Backends. Ich lege Wert auf saubere Architektur, Testabdeckung und nachvollziehbaren Code.",

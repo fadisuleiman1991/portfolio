@@ -61,7 +61,8 @@
   },
   "impressum": {
     "title": "Legal Notice",
-    "placeholder": "This page contains the legally required Impressum according to § 5 TMG. Content will be added soon.",
+    "providerInformation": "Information pursuant to Section 5 DDG",
+    "placeholder": "This page contains the legally required Impressum according to § 5 DDG. Content will be added soon.",
     "backHome": "Back to home"
   },
   "language": {
