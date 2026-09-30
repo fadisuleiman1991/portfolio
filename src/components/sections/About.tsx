@@ -13,7 +13,7 @@ export default function About() {
     { label: t("labels.nationality"), value: cv.personalInfo.nationality },
     {
       label: t("labels.location"),
-      value: `${cv.contact.city}, ${cv.contact.country}`,
+      value: `${cv.contact.address.city}, ${cv.contact.address.country}`,
     },
     { label: t("labels.maritalStatus"), value: cv.personalInfo.maritalStatus },
   ];

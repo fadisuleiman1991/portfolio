@@ -54,8 +54,8 @@ export default function Hero() {
             }}
             className="absolute font-mono text-xs md:text-sm text-fg"
             style={{
-              top: `${10 + (((i + 1) * 11) % 75)}%`,
-              insetInlineStart: `${5 + (((i + 1) * 17) % 85)}%`,
+              top: `${10 + ((i * 11) % 75)}%`,
+              insetInlineStart: `${5 + ((i * 17) % 85)}%`,
             }}
           >
             {tag}

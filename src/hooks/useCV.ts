@@ -15,5 +15,5 @@ export function useCV(): { cv: CV; lang: SupportedLang; isRtl: boolean } {
   const { i18n } = useTranslation();
   const lang = (i18n.language || "de").split("-")[0] as SupportedLang;
   const cv = dataset[lang] ?? cvDe;
-  return { cv, lang, isRtl: lang === "ar" };
+  return { cv, lang, isRtl: i18n.dir() === "rtl" };
 }
