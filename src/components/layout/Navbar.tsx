@@ -21,7 +21,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const active = useScrollSpy([...SECTIONS]);
-  const isImpressum = location.pathname === "/impressum";
+  const isHome = location.pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -48,7 +48,7 @@ export default function Navbar() {
           Fadi<span className="text-accent">.</span>Suleiman
         </a>
 
-        {!isImpressum && (
+        {isHome && (
           <ul className="hidden lg:flex items-center gap-1">
             {SECTIONS.map((s) => {
               const isActive = active === s;
@@ -57,7 +57,7 @@ export default function Navbar() {
                   <a
                     href={`#${s}`}
                     className={clsx(
-                      "px-3 py-2 font-mono text-xs uppercase tracking-wider transition-colors",
+                      "px-3 py-2 font-mono text-xs uppercase whitespace-nowrap tracking-wider transition-colors",
                       isActive ? "text-accent" : "text-fg/70 hover:text-fg",
                     )}
                   >
@@ -87,7 +87,7 @@ export default function Navbar() {
 
       {open && (
         <div className="lg:hidden border-t border-fg/10 bg-bg/95 backdrop-blur-md">
-          {!isImpressum && (
+          {isHome && (
             <ul className="px-6 py-4 flex flex-col gap-1">
               {SECTIONS.map((s) => (
                 <li key={s}>

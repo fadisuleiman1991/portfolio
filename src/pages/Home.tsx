@@ -8,6 +8,13 @@ import Activities from "../components/sections/Activities";
 import Contact from "../components/sections/Contact";
 
 export default function Home() {
+  window.addEventListener("load", () => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      element?.scrollIntoView();
+    }
+  });
+
   return (
     <main>
       <Hero />

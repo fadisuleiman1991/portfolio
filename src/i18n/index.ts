@@ -8,8 +8,9 @@ import ar from "./locales/ar.json";
 
 export const SUPPORTED_LANGS = ["de", "en", "ar"] as const;
 export type SupportedLang = (typeof SUPPORTED_LANGS)[number];
-
 const RTL_LANGS: SupportedLang[] = ["ar"];
+let lng = localStorage.getItem("i18nextLng") || "de";
+lng = SUPPORTED_LANGS.includes(lng as SupportedLang) ? lng : "de";
 
 i18n
   .use(LanguageDetector)
@@ -21,7 +22,7 @@ i18n
       ar: { translation: ar },
     },
     fallbackLng: "de",
-    lng: "de",
+    lng,
     supportedLngs: SUPPORTED_LANGS,
     detection: {
       order: ["localStorage"],
