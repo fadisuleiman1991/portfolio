@@ -33,10 +33,6 @@ jobs:
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
-            echo "SSH connection successful"
-            whoami
-            hostname
-            pwd
             cd Projects/portfolio
             git pull origin main
             docker compose up -d --build
