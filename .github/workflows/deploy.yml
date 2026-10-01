@@ -37,6 +37,6 @@ jobs:
             whoami
             hostname
             pwd
-            cd root/Projects/Portfolio
+            cd Projects/portfolio
             git pull origin main
             docker compose up -d --build
